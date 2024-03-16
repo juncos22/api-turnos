@@ -10,6 +10,7 @@
 2. TURNOS
     - Crear turno
     - Visualizar turnos de un usuario
+    - Detalles de un turno
     - Modificar un turno
     - Eliminar un turno
 
