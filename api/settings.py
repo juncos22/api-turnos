@@ -29,7 +29,7 @@ DEBUG = 'VERCEL' not in os.environ
 
 ALLOWED_HOSTS = []
 if not DEBUG:
-    ALLOWED_HOSTS.append('vercel.app')
+    ALLOWED_HOSTS.append('.vercel.app')
     ALLOWED_HOSTS.append('localhost')
     ALLOWED_HOSTS.append('127.0.0.1')
 
