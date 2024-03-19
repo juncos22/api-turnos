@@ -137,4 +137,5 @@ if not DEBUG:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Cors Authorization
-CORS_ALLOWED_ORIGINS=[]
+CORS_ALLOWED_ORIGINS=['localhost']
+CORS_ALLOW_ALL_ORIGINS=True
