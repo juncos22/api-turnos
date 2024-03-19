@@ -27,20 +27,11 @@ SECRET_KEY = 'django-insecure-c#=6kss&^z5gmbui=u%%k-w&m@^y-x3gst2j)v)#a9o94j#b#s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'VERCEL' not in os.environ
 
-ALLOWED_HOSTS = ['.vercel.app', '*']
-
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-]
-CORS_ALLOW_HEADERS = (
-    "accept",
-    "authorization",
-    "content-type",
-    "user-agent",
-    "x-csrftoken",
-    "x-requested-with",
-)
+ALLOWED_HOSTS = []
+if not DEBUG:
+    ALLOWED_HOSTS.append('vercel.app')
+    ALLOWED_HOSTS.append('localhost')
+    ALLOWED_HOSTS.append('127.0.0.1')
 
 # Application definition
 
@@ -51,9 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
-    'corsheaders',
     'turnos'
 ]
 
@@ -144,3 +135,6 @@ if not DEBUG:
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Cors Authorization
+CORS_ALLOWED_ORIGINS=[]
